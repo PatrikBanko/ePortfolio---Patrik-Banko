@@ -4,3 +4,92 @@ $crvena: #ff5722;
 $crna: #222831;
 $bijela: #eeeeee;
 
+/*
+===========
+Globalne promjene
+===========
+*/
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: 'Poppins';
+}
+
+body {
+	scroll-behavior: smooth;
+}
+
+a {
+	text-decoration: none;
+}
+
+ul {
+	list-style-type: none;
+}
+
+img {
+	width: 100%;
+}
+
+/*
+===========
+Postavke i boje stranica
+===========
+*/
+
+#Pocetna {
+	background-color: $crna;
+	height: calc(100vh - 90px);
+}
+
+/*
+===========
+Navigacija
+===========
+*/
+
+.navbar {
+	background-color: $crna;
+	display: flex;
+	height: 90px;
+	align-items: center;
+	justify-content: center;
+
+	.logo {
+		color: $crvena;
+		display: none;
+	}
+
+	.navbar-list {
+		display: flex;
+
+		.navbar-list-item {
+			color: $bijela;
+			margin: 0 1em;
+			position: relative;
+		}
+
+		/* Hover efekt */
+		.navbar-list-item::after {
+			content: '';
+			position: absolute;
+			left: 0;
+			bottom: -5px;
+			width: 100%;
+			height: 3px;
+			background-color: $crvena;
+
+			transform: scaleX(0);
+			transform-origin: right;
+			transition: transform 0.3s ease-in;
+		}
+
+		.navbar-list-item:hover:after {
+			transform: scaleX(1);
+			transform-origin: left;
+		}
+		/* Hover efekt - kraj */
+	}
+}
