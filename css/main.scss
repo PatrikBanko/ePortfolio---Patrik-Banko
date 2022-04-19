@@ -93,3 +93,48 @@ Navigacija
 		/* Hover efekt - kraj */
 	}
 }
+
+/*
+===========
+Početna
+===========
+*/
+
+#Pocetna {
+	h1,
+	p {
+		color: $bijela;
+	}
+
+	.hero-intro-social {
+		ul {
+			display: flex;
+			width: 9em;
+			justify-content: space-between;
+
+			img {
+				display: flex;
+				align-items: center;
+			}
+		}
+	}
+
+	.hero-intro-btn {
+		background-color: $crna;
+		border-radius: 20px;
+		border: 3px solid $crvena;
+		padding: 10px 15px;
+		color: $crvena;
+		cursor: pointer;
+
+		a {
+			color: $crvena;
+		}
+	}
+
+	.hero-intro-btn:hover {
+		background-color: $crvena;
+		color: $bijela;
+		transition: 250ms ease-in-out;
+	}
+}
